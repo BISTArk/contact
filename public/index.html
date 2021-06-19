@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>websike</title>
+  </head>
+  <body>
+    <h1>Big headline</h1>
+    <p><a href="#">Main</a>|<a href="/log">View log</a></p>
+    <p>
+      latitude: <span id="latitude"></span>&deg;<br />
+      longitude: <span id="longitude"></span>&deg;<br />
+    </p>
+    <label
+      ><strong>Your mood</strong>
+      <input type="text" id="mood" placeholder="I'm feeling lucky"
+    /></label>
+    <button id="submit" onclick="send()">Submit</button>
+
+    <div>
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <div class="form-item">
+        <label for="name">Enter your name</label>
+        <input type="text" name="name" id="nameid" placeholder="Enter Name" required/>
+        </div>
+        <div class="form-item">
+          <label for="emai">Enter your Email-id</label>
+          <input type="text" name="email" id="emailid" placeholder="Enter Email id" required/>
+          </div>
+          <div class="form-item">
+            <label for="sub">Subject</label>
+            <input type="text" name="sub" id="subid" placeholder="Subject" required/>
+            </div>
+        <div class="form-item">
+          <label for="body">Mail</label>
+          <input type="text" name="body" id="bodyid" placeholder="Hi there, talk to me" required/>
+          </div>
+          <div class="form-item">
+            <button type="button" id="mail" onclick="maler()">Submit</button>
+          </div>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
