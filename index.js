@@ -4,7 +4,7 @@ const datastore = require("nedb");
 const mailer = require("nodemailer");
 require('dotenv').config()
 
-let database = new datastore('database.db');
+let database = new datastore('./.data/database.db');
 
 database.loadDatabase();
 
