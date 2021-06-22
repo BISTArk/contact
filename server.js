@@ -8,11 +8,12 @@ let database = new datastore('./.data/database.db');
 
 database.loadDatabase();
 
-const url = 'http://localhost:3001'
+const port = process.env.PORT || 3000;
+const url = `http://localhost:${port}`
 
-app.listen(process.env.port, () => console.log(`live at ${url}`));
+app.listen(port, () => console.log(`live at ${url}`));
 app.use(express.static("public"));
-app.use(express.json({ }));
+app.use(express.json({limit : "100mb" }));
 
 app.get('/api',(req, res) =>{
   database.find({},(err, data) =>{
