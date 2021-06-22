@@ -10,7 +10,7 @@ database.loadDatabase();
 
 const url = 'http://localhost:3001'
 
-app.listen(3001, () => console.log(`live at ${url}`));
+app.listen(process.env.port, () => console.log(`live at ${url}`));
 app.use(express.static("public"));
 app.use(express.json({ }));
 
